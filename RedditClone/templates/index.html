@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<body ng-controller="IndexController">
+{% for post in posts %}
+    <div>
+    <a href="{{ post.link }}"><h2>{{ post.title }}</h2> <h5>{{ post.link }}</h5></a>
+    <p>{{ post.text }}</p>
+    <a href="/vote/{{ post.id }}">Vote - {{ post.vote_set.count }}</a>
+    </div>
+    {% verbatim %}
+    {{ text }}
+    {% endverbatim %}
+    <hr>
+{% endfor %}
+</body>
+{% endblock content %}
