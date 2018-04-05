@@ -6,11 +6,9 @@
     <div>
     <a href="{{ post.link }}"><h2>{{ post.title }}</h2> <h5>{{ post.link }}</h5></a>
     <p>{{ post.text }}</p>
-    <a href="/vote/{{ post.id }}">Vote - {{ post.vote_set.count }}</a>
+    <p>{{ post.vote_set.count }}</p>
+    <button ng-click="vote('{{ post.id }}')">vote</button>
     </div>
-    {% verbatim %}
-    {{ text }}
-    {% endverbatim %}
     <hr>
 {% endfor %}
 </body>

@@ -96,3 +96,6 @@ def vote_view(request, postId):
         vote.save()
 
     return HttpResponseRedirect('/')
+
+def test(request):
+    return HttpResponse("wokring now")

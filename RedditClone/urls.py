@@ -24,5 +24,6 @@ urlpatterns = [
     path('create/', views.create_view),
     path('register/', views.createUser_view),
     path('vote/<int:postId>', views.vote_view),
+    path('test/', views.test),
     path('admin/', admin.site.urls),
 ]
